@@ -1,0 +1,11 @@
+[main]
+Title=RedHat VirtIO Network Drivers
+Description=Installs the drivers from the iso available http://alt.fedoraproject.org/pub/alt/virtio-win/latest/images/bin/
+Selected=True
+Level=6
+Version=1
+
+[process]
+FileCopy,%GlobalTemplates%\apps\virtio-drivers\XP\x86\netkvm.inf,%target_win%\inf
+FileCopy,%GlobalTemplates%\apps\virtio-drivers\XP\x86\netkvm.sys,%target_sys%\drivers
+

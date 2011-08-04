@@ -1,0 +1,16 @@
+[Main]
+Title=RedHat VirtIO Storage Drivers
+Description=Installs the drivers from the iso available http://alt.fedoraproject.org/pub/alt/virtio-win/latest/images/bin/
+Selected=True
+Level=6
+Version=1
+
+[process]
+FileCopy,%GlobalTemplates%\apps\virtio-drivers\Wxp\x86\viostor.sys,%target_sys%\drivers
+
+IniWrite,%TargetDir%\I386\TXTSETUP.SIF,SCSI,viostor,"#$qRed Hat VirtIO SCSI controller#$q"
+IniWrite,%TargetDir%\I386\TXTSETUP.SIF,SCSI.Load,viostor,"viostor.sys,4"
+IniWrite,%TargetDir%\I386\TXTSETUP.SIF,HardwareIdsDatabase,PCI\VEN_1AF4&DEV_1001&SUBSYS_00000000,"#$qviostor#$q"
+IniWrite,%TargetDir%\I386\TXTSETUP.SIF,HardwareIdsDatabase,PCI\VEN_1AF4&DEV_1001&SUBSYS_00020000,"#$qviostor#$q"
+IniWrite,%TargetDir%\I386\TXTSETUP.SIF,HardwareIdsDatabase,PCI\VEN_1AF4&DEV_1001&SUBSYS_00021AF4,"#$qviostor#$q"
+
