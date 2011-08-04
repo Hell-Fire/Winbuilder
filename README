@@ -1,1 +1,3 @@
 This project houses some helpful Winbuilder scripts, mostly to assist in the bare metal recovery of Windows server VMs with Bacula/VirtIO.
+
+VirtIO drivers expected to be taken from the virtio iso (http://alt.fedoraproject.org/pub/alt/virtio-win/latest/images/bin/) and placed in WinBuilder\Workbench\Common\apps\virtio-drivers.
